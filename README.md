@@ -6,7 +6,7 @@ Claude Code가 스스로 작성한 Claude Code 입문서입니다.
 
 ## 📖 웹으로 읽기
 
-**[👉 GitHub Pages로 바로 읽기](https://[YOUR-USERNAME].github.io/book-claude-code/)**
+**[👉 GitHub Pages로 바로 읽기](https://coalab.github.io/book-claude-code/)**
 
 페이지 넘기기 애니메이션이 있는 인터랙티브 웹 뷰어입니다.
 키보드 `←` `→` 또는 터치 스와이프로 페이지를 넘깁니다.
@@ -25,7 +25,7 @@ Claude Code가 스스로 작성한 Claude Code 입문서입니다.
 ## 🚀 로컬에서 실행
 
 ```bash
-git clone https://github.com/[YOUR-USERNAME]/book-claude-code
+git clone https://github.com/coalab/book-claude-code
 cd book-claude-code
 
 # 웹 뷰어: web/index.html을 브라우저로 열기
