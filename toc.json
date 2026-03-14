@@ -1,0 +1,386 @@
+{
+  "title": "Claude Code 시작하기",
+  "subtitle": "AI 페어 프로그래머와 함께하는 개발의 미래",
+  "parts": [
+    {
+      "part": 1,
+      "title": "시작하기",
+      "chapters": [
+        {
+          "chapter": 1,
+          "title": "Claude Code란 무엇인가",
+          "subtitle": "AI 페어 프로그래머의 등장과 개발 패러다임의 전환",
+          "sections": [
+            "1.1 AI 코딩 도구의 역사와 Claude Code의 위치",
+            "1.2 Claude Code가 기존 도구와 다른 점 (Copilot, ChatGPT와 비교)",
+            "1.3 Claude Code의 핵심 철학: 에이전트 기반 개발",
+            "1.4 이 책을 읽는 방법과 학습 로드맵"
+          ],
+          "key_concepts": [
+            "에이전트 기반 AI",
+            "페어 프로그래밍",
+            "대규모 언어 모델(LLM)",
+            "컨텍스트 윈도우"
+          ],
+          "estimated_pages": 20
+        },
+        {
+          "chapter": 2,
+          "title": "설치와 환경 설정",
+          "subtitle": "Claude Code를 내 컴퓨터에 완벽하게 세팅하기",
+          "sections": [
+            "2.1 사전 요구사항: Node.js, npm, Anthropic API 키 발급",
+            "2.2 운영체제별 설치 방법 (macOS, Linux, Windows WSL)",
+            "2.3 첫 실행과 인증 설정 (API 키, Claude.ai Pro 연동)",
+            "2.4 터미널 환경 최적화 및 Shell 설정 (zsh, bash, fish)"
+          ],
+          "key_concepts": [
+            "npm 글로벌 설치",
+            "Anthropic API 키",
+            "환경 변수",
+            "WSL2 설정"
+          ],
+          "estimated_pages": 22
+        },
+        {
+          "chapter": 3,
+          "title": "첫 번째 세션: Hello, Claude Code!",
+          "subtitle": "실전 대화로 배우는 Claude Code의 기본 흐름",
+          "sections": [
+            "3.1 claude 명령어로 세션 시작하기",
+            "3.2 자연어로 코드 생성 요청하기 (간단한 Python 스크립트 예제)",
+            "3.3 REPL 모드 vs 일회성 실행 (-p 플래그) 차이 이해",
+            "3.4 세션 종료와 대화 기록 관리"
+          ],
+          "key_concepts": [
+            "REPL 인터페이스",
+            "프롬프트 엔지니어링 기초",
+            "세션 컨텍스트",
+            "출력 형식 제어"
+          ],
+          "estimated_pages": 18
+        }
+      ]
+    },
+    {
+      "part": 2,
+      "title": "핵심 기능 마스터하기",
+      "chapters": [
+        {
+          "chapter": 4,
+          "title": "파일 읽기와 코드 이해",
+          "subtitle": "Claude Code가 내 코드베이스를 파악하는 방법",
+          "sections": [
+            "4.1 파일 읽기 도구(Read) 동작 원리와 활용법",
+            "4.2 대형 코드베이스 탐색: 디렉토리 구조 파악 전략",
+            "4.3 레거시 코드 분석 요청하기 (실전 예제: Express.js 앱)",
+            "4.4 컨텍스트 한계 관리: 필요한 파일만 선택적으로 읽히기"
+          ],
+          "key_concepts": [
+            "Read 도구",
+            "코드베이스 탐색",
+            "컨텍스트 관리",
+            "Glob 패턴"
+          ],
+          "estimated_pages": 24
+        },
+        {
+          "chapter": 5,
+          "title": "파일 편집과 코드 작성",
+          "subtitle": "Edit, Write 도구로 실제 파일을 안전하게 수정하기",
+          "sections": [
+            "5.1 Edit 도구의 작동 방식: 정확한 문자열 매칭 원리",
+            "5.2 Write 도구로 새 파일 생성하기 (모듈, 컴포넌트, 설정 파일)",
+            "5.3 리팩토링 요청 패턴: 함수 추출, 네이밍 개선, 중복 제거",
+            "5.4 대규모 편집 시 안전성 확보: 변경사항 검토와 되돌리기"
+          ],
+          "key_concepts": [
+            "Edit 도구",
+            "Write 도구",
+            "원자적 편집",
+            "git diff 활용"
+          ],
+          "estimated_pages": 26
+        },
+        {
+          "chapter": 6,
+          "title": "코드 실행과 테스트",
+          "subtitle": "Bash 도구로 코드를 직접 실행하고 결과를 확인하기",
+          "sections": [
+            "6.1 Bash 도구 이해: 명령어 실행의 범위와 제약",
+            "6.2 테스트 자동화: 단위 테스트 작성부터 실행까지",
+            "6.3 빌드 파이프라인 연동 (npm, make, pytest, gradle)",
+            "6.4 실행 오류 디버깅: 에러 메시지를 Claude Code에 전달하는 패턴"
+          ],
+          "key_concepts": [
+            "Bash 도구",
+            "테스트 주도 개발",
+            "CI/CD 연동",
+            "오류 디버깅 루프"
+          ],
+          "estimated_pages": 25
+        },
+        {
+          "chapter": 7,
+          "title": "검색과 코드베이스 탐색",
+          "subtitle": "Grep, Glob으로 대형 프로젝트에서 원하는 코드 찾기",
+          "sections": [
+            "7.1 Grep 도구 활용: 패턴 검색과 정규표현식",
+            "7.2 Glob 도구 활용: 파일 패턴 매칭과 일괄 처리",
+            "7.3 심볼 검색과 의존성 추적 (함수 호출 체인 파악)",
+            "7.4 코드베이스 전체 리뷰 요청: 보안 취약점, 코딩 컨벤션 검사"
+          ],
+          "key_concepts": [
+            "Grep 도구",
+            "Glob 도구",
+            "정규표현식",
+            "의존성 그래프"
+          ],
+          "estimated_pages": 22
+        }
+      ]
+    },
+    {
+      "part": 3,
+      "title": "고급 워크플로우",
+      "chapters": [
+        {
+          "chapter": 8,
+          "title": "CLAUDE.md로 프로젝트 맥락 설정하기",
+          "subtitle": "팀과 AI가 공유하는 프로젝트 지침서 만들기",
+          "sections": [
+            "8.1 CLAUDE.md의 역할과 자동 로딩 메커니즘",
+            "8.2 효과적인 CLAUDE.md 작성법: 코딩 컨벤션, 금지 명령, 아키텍처 설명",
+            "8.3 계층적 CLAUDE.md 구성 (루트, 서브디렉토리별 설정)",
+            "8.4 팀 프로젝트에서 CLAUDE.md 버전 관리 전략"
+          ],
+          "key_concepts": [
+            "CLAUDE.md",
+            "시스템 프롬프트",
+            "프로젝트 메모리",
+            "계층적 설정"
+          ],
+          "estimated_pages": 20
+        },
+        {
+          "chapter": 9,
+          "title": "멀티 에이전트 워크플로우",
+          "subtitle": "여러 Claude 인스턴스가 협력하는 병렬 개발",
+          "sections": [
+            "9.1 멀티 에이전트 아키텍처 개념: 오케스트레이터와 서브에이전트",
+            "9.2 git worktree를 활용한 병렬 작업 설정",
+            "9.3 실전 예제: 프론트엔드/백엔드 동시 개발",
+            "9.4 에이전트 간 충돌 방지와 작업 결과 통합 전략"
+          ],
+          "key_concepts": [
+            "멀티 에이전트",
+            "git worktree",
+            "병렬 실행",
+            "작업 분할"
+          ],
+          "estimated_pages": 28
+        },
+        {
+          "chapter": 10,
+          "title": "훅(Hooks)으로 워크플로우 자동화",
+          "subtitle": "Claude Code 이벤트에 나만의 자동화 로직 연결하기",
+          "sections": [
+            "10.1 훅 시스템 개요: PreToolUse, PostToolUse, Stop 이벤트",
+            "10.2 훅 설정 파일 작성법 (settings.json)",
+            "10.3 실전 훅 예제: 자동 포맷팅, 린팅, 알림 전송",
+            "10.4 보안 훅 구현: 민감한 파일 보호와 위험 명령 차단"
+          ],
+          "key_concepts": [
+            "이벤트 훅",
+            "PreToolUse/PostToolUse",
+            "자동화 파이프라인",
+            "보안 정책"
+          ],
+          "estimated_pages": 26
+        },
+        {
+          "chapter": 11,
+          "title": "MCP로 Claude Code 확장하기",
+          "subtitle": "Model Context Protocol로 외부 도구와 데이터 연결",
+          "sections": [
+            "11.1 MCP란 무엇인가: 표준화된 AI 도구 인터페이스",
+            "11.2 MCP 서버 설치와 설정 (GitHub, Slack, 데이터베이스 MCP)",
+            "11.3 직접 MCP 서버 만들기: 사내 API 연동 예제",
+            "11.4 MCP 생태계 활용: 공개 MCP 서버 디렉토리 탐색"
+          ],
+          "key_concepts": [
+            "Model Context Protocol",
+            "MCP 서버",
+            "도구 확장",
+            "API 연동"
+          ],
+          "estimated_pages": 30
+        }
+      ]
+    },
+    {
+      "part": 4,
+      "title": "실전 프로젝트",
+      "chapters": [
+        {
+          "chapter": 12,
+          "title": "풀스택 웹 앱 개발: To-Do 앱에서 SaaS까지",
+          "subtitle": "React + Node.js 프로젝트를 Claude Code와 처음부터 끝까지",
+          "sections": [
+            "12.1 프로젝트 초기화: 폴더 구조, 의존성, 설정 파일 생성",
+            "12.2 백엔드 API 설계와 구현 (Express.js + PostgreSQL)",
+            "12.3 프론트엔드 컴포넌트 개발 (React + Tailwind CSS)",
+            "12.4 통합 테스트 작성과 배포 준비 (Docker, CI/CD)"
+          ],
+          "key_concepts": [
+            "풀스택 개발",
+            "TDD with Claude",
+            "Docker 컨테이너화",
+            "배포 자동화"
+          ],
+          "estimated_pages": 40
+        },
+        {
+          "chapter": 13,
+          "title": "레거시 코드 현대화 프로젝트",
+          "subtitle": "10년 된 코드베이스를 Claude Code와 함께 리팩토링하기",
+          "sections": [
+            "13.1 레거시 코드 분석: 의존성 맵, 기술 부채 목록 작성",
+            "13.2 단계적 마이그레이션 전략 수립 (빅뱅 vs 점진적)",
+            "13.3 테스트 없는 코드에 테스트 추가하기",
+            "13.4 Python 2 → 3, jQuery → React 마이그레이션 실전"
+          ],
+          "key_concepts": [
+            "기술 부채",
+            "리팩토링 패턴",
+            "마이그레이션 전략",
+            "레거시 테스팅"
+          ],
+          "estimated_pages": 36
+        },
+        {
+          "chapter": 14,
+          "title": "버그 헌팅과 성능 최적화",
+          "subtitle": "프로덕션 이슈를 Claude Code와 함께 빠르게 해결하기",
+          "sections": [
+            "14.1 버그 재현과 원인 분석 요청 패턴",
+            "14.2 메모리 누수, N+1 쿼리 등 성능 문제 진단",
+            "14.3 프로파일링 결과를 Claude Code에 전달하고 최적화하기",
+            "14.4 핫픽스 적용과 회귀 테스트 자동화"
+          ],
+          "key_concepts": [
+            "디버깅 방법론",
+            "성능 프로파일링",
+            "N+1 쿼리",
+            "회귀 테스트"
+          ],
+          "estimated_pages": 32
+        },
+        {
+          "chapter": 15,
+          "title": "팀 협업과 코드 리뷰 자동화",
+          "subtitle": "GitHub PR 리뷰, 문서화, 온보딩을 Claude Code로 가속하기",
+          "sections": [
+            "15.1 GitHub Actions에서 Claude Code 실행하기",
+            "15.2 자동 PR 리뷰: 코딩 스타일, 보안, 성능 체크",
+            "15.3 코드 문서화 자동화: JSDoc, docstring, README 생성",
+            "15.4 신규 팀원 온보딩 가이드 자동 생성"
+          ],
+          "key_concepts": [
+            "GitHub Actions",
+            "자동 코드 리뷰",
+            "문서화 자동화",
+            "팀 협업 워크플로우"
+          ],
+          "estimated_pages": 30
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "title": "최적화와 미래",
+      "chapters": [
+        {
+          "chapter": 16,
+          "title": "프롬프트 엔지니어링 고급 기법",
+          "subtitle": "Claude Code와 더 잘 소통하는 법을 마스터하기",
+          "sections": [
+            "16.1 효과적인 작업 지시 패턴: 명확성, 범위, 출력 형식",
+            "16.2 Think 모드 활용: 복잡한 문제에서 추론 유도하기",
+            "16.3 컨텍스트 압축과 /compact 명령 전략",
+            "16.4 모델 선택 전략: claude-opus vs claude-sonnet 상황별 선택"
+          ],
+          "key_concepts": [
+            "프롬프트 패턴",
+            "Think 모드",
+            "컨텍스트 압축",
+            "모델 선택 전략"
+          ],
+          "estimated_pages": 26
+        },
+        {
+          "chapter": 17,
+          "title": "비용 관리와 보안 베스트 프랙티스",
+          "subtitle": "API 비용을 줄이고 안전하게 Claude Code 운영하기",
+          "sections": [
+            "17.1 토큰 사용량 모니터링과 비용 예측",
+            "17.2 컨텍스트 효율화: 불필요한 파일 배제 전략",
+            "17.3 보안 설정: 허용/차단 목록, 권한 범위 최소화",
+            "17.4 민감 정보 보호: .env, 시크릿, 개인정보 유출 방지"
+          ],
+          "key_concepts": [
+            "토큰 최적화",
+            "비용 모니터링",
+            "최소 권한 원칙",
+            "시크릿 관리"
+          ],
+          "estimated_pages": 22
+        },
+        {
+          "chapter": 18,
+          "title": "AI 협업 개발의 미래",
+          "subtitle": "변화하는 개발 생태계에서 개발자로 성장하기",
+          "sections": [
+            "18.1 에이전트 기반 개발이 바꾸는 소프트웨어 개발 방법론",
+            "18.2 개발자 역할의 진화: 아키텍트, 큐레이터, 비저너리",
+            "18.3 Claude Code 로드맵과 업데이트 추적하기",
+            "18.4 AI와 함께 성장하는 개발자 커리어 설계"
+          ],
+          "key_concepts": [
+            "에이전트 기반 개발",
+            "개발자 역할 변화",
+            "지속적 학습",
+            "커리어 전략"
+          ],
+          "estimated_pages": 18
+        }
+      ]
+    }
+  ],
+  "appendix": [
+    {
+      "title": "부록 A: Claude Code 설치 빠른 참조 가이드",
+      "content": "운영체제별(macOS, Ubuntu, Windows WSL2) 설치 명령어 모음, 자주 발생하는 설치 오류와 해결법, Anthropic API 키 발급 및 관리 방법을 한 페이지로 정리"
+    },
+    {
+      "title": "부록 B: 핵심 슬래시 명령어 레퍼런스",
+      "content": "/help, /compact, /clear, /model, /cost, /doctor, /review, /vim 등 모든 내장 슬래시 명령어의 용도, 사용법, 예시를 표 형식으로 정리. 버전별 명령어 변경 이력 포함"
+    },
+    {
+      "title": "부록 C: settings.json 완전 레퍼런스",
+      "content": "글로벌(~/.claude/) 및 프로젝트(.claude/) 설정 파일의 모든 옵션 설명. 훅 설정, 권한 설정, 모델 설정, MCP 서버 설정 예제 포함. 실무에서 바로 쓸 수 있는 설정 템플릿 5종 제공"
+    },
+    {
+      "title": "부록 D: CLAUDE.md 템플릿 모음",
+      "content": "Python 백엔드, React 프론트엔드, Go 마이크로서비스, 데이터 엔지니어링, 모바일(Flutter) 프로젝트 유형별 CLAUDE.md 템플릿 제공. 팀 협업을 위한 다국어(한국어/영어) 혼용 작성 가이드 포함"
+    },
+    {
+      "title": "부록 E: 추천 MCP 서버 디렉토리",
+      "content": "공개 MCP 서버 목록(GitHub, Slack, Notion, Jira, AWS, PostgreSQL, Figma 등)과 설치 방법. 각 MCP 서버의 제공 도구, 사용 사례, 주의사항 정리. 직접 MCP 서버를 만들 때 참고할 수 있는 보일러플레이트 코드 링크 모음"
+    },
+    {
+      "title": "부록 F: 자주 묻는 질문(FAQ) 및 문제 해결",
+      "content": "Claude Code 사용 중 자주 발생하는 50가지 문제와 해결 방법. '컨텍스트가 너무 길다', '파일 수정이 안 된다', 'API 오류가 발생한다', '비용이 너무 많이 나온다' 등 실무 상황별 트러블슈팅 가이드"
+    }
+  ]
+}
